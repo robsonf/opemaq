@@ -1,0 +1,26 @@
+CREATE TABLE propriedade (id identity, nome varchar(50), data date, valor double, tipo integer, solo varchar(50), relevo varchar(50),  fertilidade varchar(50), tamanho varchar(50), declividade varchar(50))
+insert into propriedade (nome , data , valor , tipo , solo , relevo ,  fertilidade, tamanho, declividade) values ('fulano', '2013-11-20', 20.0, 1, 'solo', 'relevo', 'fertilidade', 'tamanho', 'declividade')
+update propriedade set nome = ? , data = ? , valor = ? , tipo = ? , solo = ? , relevo = ? ,  fertilidade = ? , tamanho = ?, declividade = ?  where id = ?
+
+CREATE TABLE usuario (id identity, nome varchar(50), email varchar(50), senha varchar(50), ultimoAcesso varchar(50), qualificacao varchar(50), idade integer,  experiencia varchar(50), tempoDeUso date, obs varchar(50))
+insert into usuario (nome , email , senha,  ultimoAcesso, qualificacao, idade, experiencia, tempoDeUso , obs ) values ('fulano', 'robsonf@gmail.com', '1234', '2013-12-01', 'qualificacao', 29, 'experiencia', '2013-12-02', 'obs')
+update usuario set nome = ? , email = ? , senha = ?,  ultimoAcesso = ?, qualificacao = ?, idade = ?, experiencia = ?, tempoDeUso =? , obs = ?  where id = 0
+
+create table funcao (id identity, descricao varchar(50))
+INSERT INTO FUNCAO (descricao) VALUES  ('tratorista')
+
+create table funcionario (id identity, nome varchar(50), funcao integer, dataAdmissao date, idade integer, encargos double, insalubridade double, periculosidade double,  inss double, fgts double , agua double, luz double, aluguel double, experiencia varchar(50))
+insert into funcionario(id, nome, funcao, dataAdmissao, idade, encargos, insalubridade, periculosidade, inss, fgts, agua, luz, aluguel, experiencia) values (?,?,?,?,?,?,?,?,?,?,?,?,?)
+
+create table trator (id identity, eTrator boolean, apelido varchar(50), marca varchar(50), modelo varchar(50), novo varchar(50), vidaUtil varchar(50), tdp varchar(50),  tracao varchar(50), motor varchar(50), cilindros varchar(50), sucata varchar(50),  horasEstimadas varchar(50), aspiracao varchar(50), potencia varchar(50), ano varchar(50),  usoAnual varchar(50), hidraulico varchar(50), cor varchar(50))
+update trator set eTrator = ?, apelido = ?, marca = ?, modelo = ?, novo = ?, vidaUtil = ?, tdp = ?,  tracao = ?, motor = ?, cilindros = ?, sucata = ?,  horasEstimadas = ?, aspiracao  = ?, potencia  = ?, ano  = ?,  usoAnual  = ?, hidraulico  = ?, cor = ? where id = ?";
+
+
+create table cmecanizado (id identity, apelido varchar(50), idTrator integer, idImplemento integer)
+
+create table funcionariosCMecanizado (id identity, idCMecanizado integer, idFuncionario integer)
+
+create table operacao (id identity, nome varchar(50), 
+dataInicio date, dataFim date, idPropriedade integer)
+
+create table planejamento(id identity, 
